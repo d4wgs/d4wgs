@@ -4,6 +4,180 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>d4wgs</title>
+    
+    <style>
+        body {
+background-color: #0a0a0aff;
+}
+
+h1 {
+text-align: center;
+color: #eee3c1ff;
+top: 0vw;
+position: relative;
+font-size: 2vw;
+}
+
+p {
+text-align: left;
+color: #eee3c1ff;
+top: 0vw;
+position: relative;
+font-size: 16.18vw;
+}
+
+marquee {
+color: #d1342fff;
+background-color: #0a0a0aff;
+font-size: 1vw;
+padding: 0vw;
+}
+
+img {
+width: 2vw;
+height: 2vw;
+position: relative;
+top: 9vw;
+left: 2.5vw;
+border: solid 0.05vw #eee3c1ff;
+}
+
+#marquee_top_bottom {
+color: #d1342fff;
+background-color: #0a0a0aff;
+font-size: 1.5vw;
+padding: 0vw;
+}
+
+#discserver {
+position: absolute;
+top: 10vw;
+left: 3vw;
+text-align: left;
+font-size: 1vw;
+}
+
+#icontext {
+position: absolute;
+top: 17.2vw;
+left: 6vw;
+font-size: 1vw;
+line-height: 3.3vw;
+}
+
+#appname {
+position: absolute;
+top: 17.2vw;
+left: 13vw;
+font-size: 1vw;
+line-height: 3.3vw;
+}
+
+#icons {
+position: absolute;
+}
+
+#clicker_game {
+width: 45vw;
+height: 32vw;
+border: 0.1vw solid #505050ff;
+position: fixed;
+left: 50vw;
+top: 15vw;
+}
+
+#buybuttons {
+width: 10vw;
+height: 1.3vw;
+position: relative;
+top: 3vw;
+left: 1vw;
+font-size: 1vw;
+}
+
+#Shacks {
+position: absolute;
+top: 29.5vw;
+left: 0.5vw;
+font-size: 1vw;
+}
+
+#ShackOutput {
+position: absolute;
+top: 490;
+right: 1vw;
+font-size: 1vw;
+}
+
+#ShackCost {
+position: absolute;
+top: 8vw;
+left: 12vw;
+color: #eee3c1ff;
+font-size: 1vw;
+}
+
+#UpgradeCost {
+position: absolute;
+top: 13vw;
+left: 12vw;
+font-size: 1vw;
+}
+
+#GameText {
+position: absolute;
+top: 20vw;
+left: 4.5vw;
+font-size: 1vw;
+}
+
+button {
+background-color: #505050ff;
+cursor: pointer;
+text-align: center;
+}
+
+/* Hyperlink editing */
+a:link {
+  color: #d1342f;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #d9635f;
+  background-color: transparent;
+  text-decoration: underline;
+}
+/* Hyperlink editing (end) */
+
+.tooltip {
+position: relative;
+display: inline-block;
+border-bottom: 0.1vw dotted #ff4747;
+}
+  
+/* Tooltip for "Cost Per*:" text */
+.tooltip .tooltiptext {
+visibility: hidden;
+width: 9vw;
+background-color: black;
+color: #fff;
+text-align: center;
+border-radius: 0.5vw;
+padding: 0.1vw 0vw;
+opacity: 75%;
+/* Position the tooltip */
+position: absolute;
+z-index: 1;
+top: 0.9vw;
+}
+  
+.tooltip:hover .tooltiptext {
+visibility: visible;
+}
+</style>
+    
 </head>
 <body>
     <marquee id="marquee_top_bottom" scrollamount="200">---===[/+\]===---</marquee>
@@ -54,5 +228,77 @@
         <p id="Shacks">Shacks: <span id="ShackTot" style="color:#d1342fff">0</span></p>
         <p id="ShackOutput">CPS: <span id="ShackOut" style="color:#d1342fff">1</span></p>
     </div>
+    
+    <script>
+        var Cash = 999;
+
+var ShackCost = 50;
+var Shack = 0;
+var ShackTot = 0;
+var ShackTotCost1 = 50;
+var ShackOut = 1;
+var ShackUpgradeCost = 1000;
+
+function buyShack() {
+    if (Cash >= ShackCost) {
+      Cash = Cash - ShackCost;
+      Shack = Shack + 1;
+      ShackCost = Math.round(ShackCost * 1.05);
+      ShackCount = Shack;
+      ShackTotCost1 = ShackCost;
+
+      document.getElementById("Cash").innerHTML = Cash;
+      document.getElementById("ShackTot").innerHTML = ShackCount;
+      document.getElementById("ShackTotCost").innerHTML = ShackTotCost1;
+    }
+  }
+function buyShack10() {
+    if (Cash >= ShackCost) {
+      Cash = Cash - ShackCost;
+      Shack = Shack + 10;
+      ShackCost = Math.round(0.96 * (ShackCost * (1.05 ** 10)));
+      ShackCount = Shack;
+      ShackTotCost1 = ShackCost;
+      ShackTotCost10  = ShackTotCost1 * 10;
+
+      document.getElementById("Cash").innerHTML = Cash;
+      document.getElementById("ShackTot").innerHTML = ShackCount;
+      document.getElementById("ShackTotCost").innerHTML = ShackTotCost1;
+      document.getElementById("ShackTotCost10").innerHTML = ShackTotCost10;
+    }
+  }
+  function buyShack100() {
+    if (Cash >= ShackCost) {
+      Cash = Cash - ShackCost;
+      Shack = Shack + 100;
+      ShackCost = Math.round(0.9 * (ShackCost * (1.05 ** 100)));
+      ShackCount = Shack;
+      ShackTotCost1 = ShackCost;
+      ShackTotCost100  = ShackTotCost1 * 100;
+
+      document.getElementById("Cash").innerHTML = Cash;
+      document.getElementById("ShackTot").innerHTML = ShackCount;
+      document.getElementById("ShackTotCost").innerHTML = ShackTotCost1;
+      document.getElementById("ShackTotCost100").innerHTML = ShackTotCost100;
+    }
+  }
+
+function upgradeShack() {
+    if (Cash >= ShackUpgradeCost) {
+      Cash = Cash - ShackUpgradeCost;
+      ShackOut = Math.round(ShackOut * 1.5);
+      ShackUpgradeCost = Math.round(ShackUpgradeCost * 1.1);
+
+      document.getElementById("Cash").innerHTML = Cash;
+      document.getElementById("ShackOut").innerHTML = ShackOut;
+      document.getElementById("ShackUpgradeCost").innerHTML = ShackUpgradeCost;
+    }
+  }
+
+setInterval(function() {
+    Cash = Cash + Shack * ShackOut;
+    document.getElementById("Cash").innerHTML = Cash;
+  }, 250);
+    </script>
 </body>
 </html>
