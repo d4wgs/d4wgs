@@ -88,7 +88,7 @@ top: 15vw;
 
 #buybuttons {
 width: 10vw;
-height: 1.3vw;
+height: 1.5vw;
 position: relative;
 top: 3vw;
 left: 1vw;
@@ -110,17 +110,17 @@ font-size: 1vw;
 }
 
 #ShackCost {
-position: absolute;
-top: 8vw;
-left: 12vw;
+position: fixed;
+top: 8.5vw;
+left: 62vw;
 color: #eee3c1ff;
 font-size: 1vw;
 }
 
 #UpgradeCost {
-position: absolute;
-top: 13vw;
-left: 12vw;
+position: fixed;
+top: 28.7vw;
+left: 62vw;
 font-size: 1vw;
 }
 
@@ -210,10 +210,10 @@ visibility: visible;
 
     <div id="clicker_game">
         <h1>Cash: <span id="Cash">999</span></h1>
-        <button id="buybuttons" onclick="buyShack()">Buy Shack</button><br>
-        <button id="buybuttons" onclick="buyShack10()">Buy 10 Shacks</button><br>
-        <button id="buybuttons" onclick="buyShack100()">Buy 100 Shacks</button><br><br><br>
-        <button id="buybuttons" onclick="upgradeShack()">Upgrade Shack</button>
+        <button id="buybuttons" onclick="buyShack()" style="font-family:'Times New Roman', Times, serif">Buy Shack</button><br>
+        <button id="buybuttons" onclick="buyShack10()" style="font-family:'Times New Roman', Times, serif">Buy 10 Shacks</button><br>
+        <button id="buybuttons" onclick="buyShack100()" style="font-family:'Times New Roman', Times, serif">Buy 100 Shacks</button><br><br><br>
+        <button id="buybuttons" onclick="upgradeShack()" style="font-family:'Times New Roman', Times, serif">Upgrade Shack</button>
 
         <div id="ShackCost">
             <p><div class="tooltip">Cost Per*: 
