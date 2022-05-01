@@ -21,8 +21,8 @@ function buyShack() {
     }
   }
 function buyShack10() {
-    if (Cash >= ShackCost) {
-      Cash = Cash - ShackCost;
+    if (Cash >= 10 * ShackCost) {
+      Cash = Cash - (10 * ShackCost);
       Shack = Shack + 10;
       ShackCost = Math.round(0.96 * (ShackCost * (1.05 ** 10)));
       ShackCount = Shack;
@@ -36,8 +36,8 @@ function buyShack10() {
     }
   }
   function buyShack100() {
-    if (Cash >= ShackCost) {
-      Cash = Cash - ShackCost;
+    if (Cash >= 100 * ShackCost) {
+      Cash = Cash - (100 * ShackCost);
       Shack = Shack + 100;
       ShackCost = Math.round(0.9 * (ShackCost * (1.05 ** 100)));
       ShackCount = Shack;
@@ -54,8 +54,8 @@ function buyShack10() {
 function upgradeShack() {
     if (Cash >= ShackUpgradeCost) {
       Cash = Cash - ShackUpgradeCost;
-      ShackOut = Math.round(ShackOut * 1.5);
-      ShackUpgradeCost = Math.round(ShackUpgradeCost * 1.1);
+      ShackOut = Math.round(ShackOut * 1.1);
+      ShackUpgradeCost = Math.round(ShackUpgradeCost * 3.5);
 
       document.getElementById("Cash").innerHTML = Cash;
       document.getElementById("ShackOut").innerHTML = ShackOut;
