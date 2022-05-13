@@ -123,6 +123,12 @@ left: 4.5vw;
 font-size: 1vw;
 }
 
+#IncrementalConstruction {
+position: fixed;
+bottom: 2vw;
+left: 2vw;
+}
+
 button {
 background-color: #505050ff;
 cursor: pointer;
