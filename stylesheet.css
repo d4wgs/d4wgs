@@ -125,9 +125,9 @@ font-size: 1vw;
 
 #IncrementalConstruction {
 position: fixed;
-bottom: 2vw;
-left: 2vw;
-font-size: 5vw;
+left: 5vw;
+font-size: 1vw;
+top: 45vw;
 }
 
 button {
