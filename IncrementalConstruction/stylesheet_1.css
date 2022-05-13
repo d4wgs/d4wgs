@@ -1,0 +1,240 @@
+/* first purchase building button */
+#building_purchase1 {
+position: fixed;
+width: 3.4vw;
+font-size: 0.85vw;
+left: 7vw; 
+top: 8.5vw;
+}
+
+/* second purchase building button */
+#building_purchase2 {
+position: fixed;
+width: 3.4vw;
+font-size: 0.85vw;
+left: 7vw; 
+top:9.9vw;
+}
+
+/* third purchase building button */
+#building_purchase3 {
+position: fixed;
+width: 3.4vw;
+font-size: 0.85vw;
+left:7vw;
+top:11.3vw;
+}
+
+.building_purchase_button button {
+padding: 0.13vw 0.15vw;
+border: 0.05vw solid rgb(0, 0, 0);
+text-align: center;
+cursor: pointer;
+transition: 0.5s;
+}
+
+.building_purchase_button button:hover {
+background-color: #232423;
+}
+
+.settings_button button {
+padding: 0.13vw 0.15vw;
+border: 0.05vw solid rgb(0, 0, 0);
+text-align: center;
+cursor: pointer;
+transition: 0.5s;
+}
+
+.settings_button button:hover {
+background-color: #232423;
+}
+
+.upgrades_button button {
+padding: 0.13vw 0.15vw;
+border: 0.05vw solid rgb(0, 0, 0);
+text-align: center;
+cursor: pointer;
+transition: 0.5s;
+}
+
+.upgrades_button button:hover {
+background-color: #232423;
+}
+
+.reputationbuildings_button button {
+padding: 0.13vw 0.15vw;
+border: 0.05vw solid rgb(0, 0, 0);
+text-align: center;
+cursor: pointer;
+transition: 0.5s;
+}
+
+.reputationbuildings_button button:hover {
+background-color: #232423;
+}
+
+/* Building Cost Text */
+#building_cost_text {
+position: fixed;
+top: 11.3vw;
+left: 11vw;
+}
+
+/* "CPS:" in the building menus */
+#CPS_words {
+position: fixed;
+top: 11.5vw;
+right: 69vw;
+}
+
+/* Total buildings (bottom left) */
+#totalbuildings {
+position: fixed;
+bottom: 0.5vw;
+left: 0.5vw;
+color: #ff4747;
+font-size: 0.75vw;
+}
+
+/* Reputation Building Totals (GD1, VS2, OT3) */
+#RepBuildings1 {
+position: fixed;
+left: 53.7vw;
+top: 14.7vw;
+color: #9a9a9c;
+font-size: 0.75vw;
+visibility: hidden;
+}
+
+/* Reputation Building Totals (ET4, HC5, MSA6) */
+#RepBuildings2 {
+position: fixed;
+left: 65vw;
+top: 18.5vw;
+color: #9a9a9c;
+font-size: 0.75vw;
+visibility: hidden;
+}
+
+/* Reputation Building Information */
+#RepBuildings3 {
+position: fixed;
+left: 74.5vw;
+top: 19.3vw;
+}
+
+/* Buy Upgrades Buttons */
+#purchaseUpgrade {
+position: absolute;
+width: 12vw;
+height: 1.5vw;
+text-align: center;
+font-size:1vw;
+right:34vw;
+top:4.5vw;
+font-family: 'Times New Roman', serif;
+}
+
+#purchaseUpgrade_Text {
+position: absolute;
+}
+
+/* Save Button */
+#settings_button1 {
+width: 5vw;
+height: 2vw;
+bottom: 1vw;
+right: 0.5vw;
+position: fixed;
+}
+
+.Bricks_bar {
+position: fixed;
+left: 42.9vw;
+bottom: 44%;
+width: 10vw;
+height: 2vw;
+background-color: #ff4747;
+color: #1e1e1e;
+visibility: hidden;
+}
+
+#Bricks_progress {
+position: relative;
+text-align: center;
+bottom: 0.85vw;
+color: #1e1e1e;
+visibility: hidden;
+}
+
+#VisibleText_Apartment, #VisibleText_House, #VisibleText_Motel, #VisibleText_ApartmentComplex, #VisibleText_Tower, #VisibleText_Skyscraper {
+position: absolute;
+visibility: visible;
+}
+
+#HiddenText_Apartment, #HiddenText_House, #HiddenText_Motel, #HiddenText_ApartmentComplex, #HiddenText_Tower, #HiddenText_Skyscraper, #HiddenText_Reputation {
+position: absolute;
+visibility: hidden;
+}
+
+#VisibleApartmentName, #VisibleHouseName, #VisibleMotelName, #VisibleApartmentComplexName, #VisibleTowerName, #VisibleSkyscraperName, #VisibleReputationName {
+position: fixed;
+visibility: visible;
+}
+
+#HiddenApartmentName, #HiddenHouseName, #HiddenMotelName, #HiddenApartmentComplexName, #HiddenTowerName, #HiddenSkyscraperName, #HiddenReputationName,
+#ApartmentTot, #HouseTot, #MotelTot, #ApartmentComplexTot, #TowerTot, #SkyscraperTot,
+#GDTot, #VSTot, #OTTot, #ETTot, #HCTot, #MSATot {
+position: fixed;
+visibility: hidden;
+}
+
+#ApartmentUpgrade, #HouseUpgrade, #MotelUpgrade, #ApartmentComplexUpgrade, #TowerUpgrade, #SkyscraperUpgrade,
+#BuyGD, #BuyVS, #BuyOT, #BuyET, #BuyHC, #BuyMSA {
+visibility: hidden;
+}
+
+h1 {
+font-size: 2.5vw;
+font-family: 'Monaco';
+color: #ff4747;
+position: fixed;
+left: 43vw;
+bottom: 45%;
+}
+
+h3 {
+color: #FF5677;
+font-size: 1.2vw;
+}
+
+p {
+font-size: 0.85vw;
+color: #B958A5;
+}
+
+small {
+font-size: 0.85vw;
+font-family: 'Monaco';
+color: #9a9a9c;
+position: relative;
+}
+
+button {
+background-color: rgb(139, 135, 135);
+}
+
+body {
+background-color: #1e1e1e;
+font-family: 'Monaco';
+}
+
+marquee {
+background-color: #1e1e1e;
+color: #FF5677;
+position: fixed;
+width: 21.2vw;
+font-size: 1vw;
+font-family: 'Times New Roman', serif;
+right: 46.8vw;
+}
