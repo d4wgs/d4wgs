@@ -98,9 +98,9 @@ font-size: 0.75vw;
 
 /* Visible Upgrade Information */
 #UpgradeInfo {
-position: absolute;
-left: 10vw;
-top: 10vw;
+position: fixed;
+left: 53.7vw;
+top: 14.7vw;
 color: #9a9a9c;
 font-size: 0.75vw;
 }
