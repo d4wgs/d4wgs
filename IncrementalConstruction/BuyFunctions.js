@@ -271,7 +271,7 @@ function buyMotel10() {
    if (Cash >= 10 * MotelCost) {
      Cash = Cash - (10 * MotelCost);
      Motel = Motel + 10;
-     MotelCost = Math.round(0.96 * (MotelCost * (1.05 ** 100)));
+     MotelCost = Math.round(0.96 * (MotelCost * (1.05 ** 10)));
      document.getElementById("Cash").innerHTML = Cash;
      document.getElementById("Motel").innerHTML = Motel;
      document.getElementById("MotelCost").innerHTML = MotelCost;
