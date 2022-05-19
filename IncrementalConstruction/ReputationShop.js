@@ -2,8 +2,10 @@ function buyReputation() {
   if (Skyscraper >= ReputationCost) {
     Skyscraper = Skyscraper - ReputationCost;
     Reputation = Reputation + 1;
+    CPS = CPS - (SkyscraperOut * 3);
     document.getElementById("Skyscraper").innerHTML = Skyscraper;
     document.getElementById("Reputation").innerHTML = Reputation;
+    document.getElementById("CPS").innerHTML = CPS;
 
     if (Reputation >= 1) {
       document.getElementById("BuyGD").style.visibility = "visible";
@@ -17,11 +19,11 @@ function buyGDRep() {
     Reputation = Reputation - GDRepCost;
     GDRep = GDRep + 1;
     GDRepCost = Math.round(GDRepCost * 1.5);
-    GDRepCost = GDRepCost;
-    GDRep = GDRep;
+    CPS = (Shack * ShackOut) + (Apartment * ApartmentOut) + (House * HouseOut) + (Motel * MotelOut) + (ApartmentComplex * ApartmentComplexOut) + (Tower * TowerOut) + (Skyscraper * SkyscraperOut) + (GDRep * GDOut);
     document.getElementById("Reputation").innerHTML = Reputation;
     document.getElementById("GDRep").innerHTML = GDRep;
     document.getElementById("GDRepCost").innerHTML = GDRepCost;
+    document.getElementById("CPS").innerHTML = CPS;
 
     if (GDRep >= 1) {
       document.getElementById("GDTot").style.visibility = "visible";
@@ -35,8 +37,6 @@ function buyVSRep() {
     Reputation = Reputation - VSRepCost;
     VSRep = VSRep + 1;
     VSRepCost = Math.round(VSRepCost * 1.5);
-    VSRep = VSRep;
-    VSRepCost = VSRepCost;
     document.getElementById("Reputation").innerHTML = Reputation;
     document.getElementById("VSRepCost").innerHTML = VSRepCost;
     document.getElementById("VSRep").innerHTML = VSRep;
@@ -53,8 +53,6 @@ function buyOTRep() {
     Reputation = Reputation - OTRepCost;
     OTRep = OTRep + 1;
     OTRepCost = Math.round(OTRepCost * 1.5);
-    OTRep = OTRep;
-    OTRepCost = OTRepCost;
     document.getElementById("Reputation").innerHTML = Reputation;
     document.getElementById("OTRepCost").innerHTML = OTRepCost;
     document.getElementById("OTRep").innerHTML = OTRep;
@@ -71,8 +69,6 @@ function buyETRep() {
     Reputation = Reputation - ETRepCost;
     ETRep = ETRep + 1;
     ETRepCost = Math.round(ETRepCost * 1.5);
-    ETRep = ETRep;
-    ETRepCost = ETRepCost;
     document.getElementById("Reputation").innerHTML = Reputation;
     document.getElementById("ETRepCost").innerHTML = ETRepCost;
     document.getElementById("ETRep").innerHTML = ETRep;
@@ -89,8 +85,6 @@ function buyHCRep() {
     Reputation = Reputation - HCRepCost;
     HCRep = HCRep + 1;
     HCRepCost = Math.round(HCRepCost * 1.5);
-    HCRep = HCRep;
-    HCRepCost = HCRepCost;
     document.getElementById("Reputation").innerHTML = Reputation;
     document.getElementById("HCRepCost").innerHTML = HCRepCost;
     document.getElementById("HCRep").innerHTML = HCRep;
@@ -107,8 +101,6 @@ function buyMSARep() {
     Reputation = Reputation - MSARepCost;
     MSARep = MSARep + 1;
     MSARepCost = Math.round(MSARepCost * 1.5);
-    MSARep = MSARep;
-    MSARepCost = MSARepCost;
     document.getElementById("Reputation").innerHTML = Reputation;
     document.getElementById("MSARepCost").innerHTML = MSARepCost;
     document.getElementById("MSARep").innerHTML = MSARep;
