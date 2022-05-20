@@ -39,12 +39,12 @@ top: 11.5vw;
 right: 69vw;
 }
 
-/* "CPS:" in the building menus */
+/* "CPS:" total */
 #CPS_total {
 position: absolute;
-top: 23.5vw;
-left: 43vw;
+left: 0.5vw;
 color: #ff4747;
+top: 12vw;
 }
 
 /* Total buildings (bottom left) */
